@@ -143,6 +143,37 @@ const data = [
     return data.find((d) => d.id === id);
   }
 
+// Quokka.js: Start on Current File
+
 // Destructuring
 
-const book = getBooks(2);
+const book = getBook(1);
+book;
+
+// const title = book.title; 
+// const author = book.author;
+
+const {title, author, pages, publicationDate, genres, hasMovieAdaptation } = book;
+
+console.log(author, title);
+
+// const primaryGenre = genres[0];
+// const secondaryGenre = genres[1];
+
+const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
+console.log(primaryGenre, secondaryGenre, otherGenres);
+
+// Spread operator
+
+const newGenres = [...genres, 'epic fantasy'];
+newGenres;
+
+const updatedBook = { 
+  // spread object needs to be first, or the spread object will overwrite the explicit definitions
+  ...book, 
+  // Add new property 
+  moviePublicationDate: "2001-12-19", 
+  // Overwrite existing property
+  pages: 1210, 
+};
+updatedBook;
