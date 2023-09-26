@@ -142,3 +142,7 @@ const data = [
   function getBook(id) {
     return data.find((d) => d.id === id);
   }
+
+// Destructuring
+
+const book = getBooks(2);
