@@ -179,8 +179,13 @@ const updatedBook = {
 updatedBook;
 
 // Template literals
-const summary = `${title} is ${pages}-page long book in a series of ${1 + 2}, and was written by ${author} and published in  ${publicationDate.split("-")[0]}`;
+const summary = `${title} is ${pages}-page long book in a series of ${1 + 2}, and was written by ${author} and published in ${
+  publicationDate.split("-")[0]
+}. The book has ${
+  // Turnary operator standard ( condition ) ? if true : if false
+  hasMovieAdaptation ? "" : "not"
+} been adapted as a movie.
+`;
 summary;
 
-// turnary operator standard ( condition ) ? if true : if false
 
