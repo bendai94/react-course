@@ -198,6 +198,23 @@ const summary = `${title} is ${pages}-page long book in a series of ${1 + 2}, an
 `;
 summary;
 
+publicationDate.split("-")[0]
 
+// Short circuiting operators 
 
+console.log(true && "Some string");
+console.log(false && "Some string");
+console.log(hasMovieAdaptation && "This book has a movie");
+
+// falsy: 0, '', null, undefined
+console.log("jonas" && "Some string");
+console.log(0 && "Some string");
+
+console.log(true || "Some String");
+console.log(false || "Some string");
+
+console.log(book.translations.portuguese);
+
+const portugueseTranslation = book.translations.portuguese || "NOT TRANSLATED";
+portugueseTranslation;
 
