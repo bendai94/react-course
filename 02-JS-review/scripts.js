@@ -218,3 +218,8 @@ console.log(book.translations.portuguese);
 const portugueseTranslation = book.translations.portuguese || "NOT TRANSLATED";
 portugueseTranslation;
 
+// Coalescing operator ??
+console.log(book.translations.spanish ?? "no translated title");
+
+
+
