@@ -177,3 +177,10 @@ const updatedBook = {
   pages: 1210, 
 };
 updatedBook;
+
+// Template literals
+const summary = `${title} is ${pages}-page long book in a series of ${1 + 2}, and was written by ${author} and published in  ${publicationDate.split("-")[0]}`;
+summary;
+
+// turnary operator standard ( condition ) ? if true : if false
+
