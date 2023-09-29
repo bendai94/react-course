@@ -258,3 +258,7 @@ const adventureBooks = books.filter((book)=>
 ).map(book=>book.title);
 adventureBooks;
 
+// Array Reduce
+
+const pagesAllBooks = books.reduce((sum, book)=> sum+book.pages, 0);
+pagesAllBooks;
