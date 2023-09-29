@@ -233,6 +233,7 @@ console.log(getTotalReviewCount(getBook(3)));
 // Array functions
 
 // Array Map
+// preform functon on each element
 const books = getBooks();
 
 const titles =  books.map((book)=>book.title);
@@ -247,5 +248,13 @@ const essentialData = books.map((book) => ({
 
 essentialData;
 
+// Array Filter
+// return elements where function returns true
+const longBooksWithMovie = books.filter((book)=> book.pages > 500).filter((book)=>book.hasMovieAdaptation);
+longBooksWithMovie;
 
+const adventureBooks = books.filter((book)=>
+  book.genres.includes('adventure')
+).map(book=>book.title);
+adventureBooks;
 
