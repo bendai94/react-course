@@ -259,6 +259,23 @@ const adventureBooks = books.filter((book)=>
 adventureBooks;
 
 // Array Reduce
-
 const pagesAllBooks = books.reduce((sum, book)=> sum+book.pages, 0);
 pagesAllBooks;
+
+// Array Sort
+const arr = [3, 7, 1, 9, 6];
+const sortedAscending = arr.sort((a, b) => a - b);
+sortedAscending;
+const sortedDescending = arr.sort((a, b) => b - a);
+sortedDescending;
+// Sort mutates original array:
+arr;
+// to preseerve original
+const arrtwo = [3, 7, 1, 9, 6];
+const sorted = arr.slice().sort((a, b) => a - b);
+sorted;
+arrtwo;
+
+const sortedByPages = books.slice().sort((a,b)=> b.pages - a.pages).map((a)=>a.pages);
+sortedByPages
+
