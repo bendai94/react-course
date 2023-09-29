@@ -221,5 +221,12 @@ portugueseTranslation;
 // Coalescing operator ??
 console.log(book.translations.spanish ?? "no translated title");
 
+// Optional Chaining
+function getTotalReviewCount(book) {
+  const goodread = book.reviews?.goodreads?.reviewsCount ?? 0;
+  const librarything = book.reviews?.librarything?.reviewsCount ?? 0;
+  return goodread + librarything;
+}
 
+console.log(getTotalReviewCount(getBook(3)));
 
