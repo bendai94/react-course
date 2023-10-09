@@ -298,3 +298,15 @@ booksAfterDelete;
 const booksAfterUpdate = booksAfterDelete.map(book => 
   book.id === 1 ? {...book, pages: 1210 } : book);
 booksAfterUpdate;
+
+// Promises
+
+console.log(fetch("https://jsonplaceholder.typicode.com/todos"))
+
+// with promis that calls then()
+fetch("https://jsonplaceholder.typicode.com/todos")
+.then(res=> res.json())
+.then(data=> console.log(data[0]));
+
+console.log("promise started");
+
