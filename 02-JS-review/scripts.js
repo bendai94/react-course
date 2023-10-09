@@ -303,10 +303,22 @@ booksAfterUpdate;
 
 console.log(fetch("https://jsonplaceholder.typicode.com/todos"))
 
-// with promis that calls then()
+// with promise that calls then()
 fetch("https://jsonplaceholder.typicode.com/todos")
 .then(res=> res.json())
 .then(data=> console.log(data[0]));
 
 console.log("promise started");
+
+// Async/Await
+
+async function getTodos() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await res.json();
+  console.log(data[0]);
+}
+
+console.log(getTodos());
+
+console.log("called async")
 
