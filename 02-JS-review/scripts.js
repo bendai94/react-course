@@ -279,3 +279,22 @@ arrtwo;
 const sortedByPages = books.slice().sort((a,b)=> b.pages - a.pages).map((a)=>a.pages);
 sortedByPages
 
+// Immutabe Arrays
+
+// 1 add book object to array
+const newBook = {
+  id: 6,
+  title: "Lord of the Rings, the Two Towers",
+  author: "J.R.R. Tolkein",
+};
+const booksAfterAdd = [...books, newBook];
+booksAfterAdd;
+
+// 2 delete a book from array
+const booksAfterDelete = booksAfterAdd.filter(book => book.id !== 6);
+booksAfterDelete;
+
+// 3 update a single book object in the array
+const booksAfterUpdate = booksAfterDelete.map(book => 
+  book.id === 1 ? {...book, pages: 1210 } : book);
+booksAfterUpdate;
