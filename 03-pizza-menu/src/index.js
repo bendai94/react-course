@@ -66,8 +66,10 @@ function Menu () {
 
 // alternative way of writing, can use => for function definition
 // and or React.createElement()
-const Footer = () => {
-    return React.createElement('footer', null, "We're currently open!");
+function Footer() {
+    return (
+        <footer>{new Date().toLocaleTimeString()}. We're currently open</footer>
+    )
 }
 
 // never nest component declarations but always declare all your components in the top level
