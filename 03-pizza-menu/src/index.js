@@ -50,9 +50,24 @@ const pizzaData = [
 // each function can only return one object, so we wrapped the h1 and pizza in a div
 function App() {
     return <div>
-        <h1>Hello React!</h1>
+        <Header />
         <Pizza />
+        <Footer />
     </div>;
+}
+
+function Header() {
+    return <h1>Fast React Pizza Co,</h1>;
+}
+
+function Menu () {
+
+}
+
+// alternative way of writing, can use => for function definition
+// and or React.createElement()
+const Footer = () => {
+    return React.createElement('footer', null, "We're currently open!");
 }
 
 // never nest component declarations but always declare all your components in the top level
