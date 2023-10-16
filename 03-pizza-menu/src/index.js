@@ -51,7 +51,7 @@ const pizzaData = [
 function App() {
     return <div>
         <Header />
-        <Pizza />
+        <Menu />
         <Footer />
     </div>;
 }
@@ -61,7 +61,12 @@ function Header() {
 }
 
 function Menu () {
-
+    return (
+        <div>
+            <h2>Our menu</h2>
+            <Pizza />
+        </div>
+    );
 }
 
 // alternative way of writing, can use => for function definition
