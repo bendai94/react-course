@@ -57,7 +57,11 @@ function App() {
 
 // never nest component declarations but always declare all your components in the top level
 function Pizza() {
-    return <h2>Pizza</h2>
+    return <div>
+        <img src='pizzas/spinaci.jpg' alt="Pizza spinaci" />
+        <h2>Pizza Spinachi</h2>
+        <p>Tomato, mozarella, spinach, and ricotta cheese</p>
+    </div>
 }
 
 // React v18
