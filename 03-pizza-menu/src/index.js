@@ -79,8 +79,32 @@ function Menu () {
     return (
         <main className="menu">
             <h2>Our menu</h2>
-            <Pizza />
+            <Pizza name='Pizza Spinaci' 
+                ingredients='Tomato, mozarella, spinach, and ricotta cheese'
+                photoName='pizzas/spinaci.jpg'
+                price={10} />
+
+            <Pizza name='Pizza Funghi' 
+                photoName='pizzas/funghi.jpg'
+                ingredients='Tomato, mushrooms'
+                price={12} />
         </main>
+    );
+}
+
+// never nest component declarations, always declare all your components in the top level
+function Pizza(props) {
+    //console.log(props);
+
+    return (
+        <div className="pizza">
+            <img src={props.photoName} alt={props.name} />
+            <div>
+                <h3>{props.name}</h3>
+                <p>{props.ingredients}</p>
+                <span>{props.price+3}</span>
+            </div>
+        </div>
     );
 }
 
@@ -94,17 +118,6 @@ function Footer() {
     return (
         <footer className="footer">{new Date().toLocaleTimeString()}. We're currently open</footer>
     )
-}
-
-// never nest component declarations but always declare all your components in the top level
-function Pizza() {
-    return (
-        <div>
-            <img src='pizzas/spinaci.jpg' alt="Pizza spinaci" />
-            <h3>Pizza Spinachi</h3>
-            <p>Tomato, mozarella, spinach, and ricotta cheese</p>
-        </div>
-    );
 }
 
 // React v18
