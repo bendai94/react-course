@@ -69,9 +69,13 @@ function Menu () {
     );
 }
 
-// alternative way of writing, can use => for function definition
-// and or React.createElement()
 function Footer() {
+    const hour = new Date().getHours();
+    const openHour = 12;
+    const closeHour = 22;
+    const isOpen = hour >= openHour && hour <= closeHour;
+    console.log(isOpen);
+
     return (
         <footer>{new Date().toLocaleTimeString()}. We're currently open</footer>
     )
