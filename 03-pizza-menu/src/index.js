@@ -93,6 +93,9 @@ function Menu () {
 }
 
 // never nest component declarations, always declare all your components in the top level
+// remember Props are immutable in React, because props are passed to children,
+// so children can't change a prop that might affect the parent
+// React is about pure functions, no side effects
 function Pizza(props) {
     //console.log(props);
 
