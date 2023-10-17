@@ -56,8 +56,13 @@ function App() {
     </div>;
 }
 
+// single {} to go into JS, double {{}} to define an object
+//  style = {{color: 'red'}}
+// CSS names have beenconverted to camel case, font-size becomes fontSize
+// moved style out to a variable when it got too long
 function Header() {
-    return <h1>Fast React Pizza Co,</h1>;
+    const style = {color: 'red', fontSize: '48px', textTransform: 'uppercase'};
+    return <h1 style={style}>Fast React Pizza Co,</h1>;
 }
 
 function Menu () {
