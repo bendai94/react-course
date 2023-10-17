@@ -1,5 +1,6 @@
 import React from "react";
-import ReactDOM from 'react-dom/client'
+import ReactDOM from 'react-dom/client';
+import './index.css';
 
 const pizzaData = [
     {
@@ -48,12 +49,15 @@ const pizzaData = [
   
 
 // each function can only return one object, so we wrapped the h1 and pizza in a div
+// don't use Class= in JSX, it's a reserved keyword in JS, use className
 function App() {
-    return <div>
-        <Header />
-        <Menu />
-        <Footer />
-    </div>;
+    return (
+        <div className="container">
+            <Header />
+            <Menu />
+            <Footer />
+        </div>
+    );
 }
 
 // single {} to go into JS, double {{}} to define an object
@@ -61,16 +65,22 @@ function App() {
 // CSS names have beenconverted to camel case, font-size becomes fontSize
 // moved style out to a variable when it got too long
 function Header() {
-    const style = {color: 'red', fontSize: '48px', textTransform: 'uppercase'};
-    return <h1 style={style}>Fast React Pizza Co,</h1>;
+    //const style = {color: 'red', fontSize: '48px', textTransform: 'uppercase'};
+    const style = {};
+
+    return (
+        <header className="header">
+            <h1 style={style}>Fast React Pizza Co,</h1>
+        </header>
+    );
 }
 
 function Menu () {
     return (
-        <div>
+        <main className="menu">
             <h2>Our menu</h2>
             <Pizza />
-        </div>
+        </main>
     );
 }
 
@@ -82,17 +92,19 @@ function Footer() {
     console.log(isOpen);
 
     return (
-        <footer>{new Date().toLocaleTimeString()}. We're currently open</footer>
+        <footer className="footer">{new Date().toLocaleTimeString()}. We're currently open</footer>
     )
 }
 
 // never nest component declarations but always declare all your components in the top level
 function Pizza() {
-    return <div>
-        <img src='pizzas/spinaci.jpg' alt="Pizza spinaci" />
-        <h2>Pizza Spinachi</h2>
-        <p>Tomato, mozarella, spinach, and ricotta cheese</p>
-    </div>
+    return (
+        <div>
+            <img src='pizzas/spinaci.jpg' alt="Pizza spinaci" />
+            <h3>Pizza Spinachi</h3>
+            <p>Tomato, mozarella, spinach, and ricotta cheese</p>
+        </div>
+    );
 }
 
 // React v18
